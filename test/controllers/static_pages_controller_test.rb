@@ -20,4 +20,6 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     get static_pages_contact_url
     assert_response :success
   end
+
 end
+

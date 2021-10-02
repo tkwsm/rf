@@ -1,0 +1,16 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+<!--    <title>Home | Reginal Fish Genome Browser</title> -->
+    <title>Greetings</title>
+  </head>
+  <body>
+    <h1>Reginal Fish Genome Browser</h1>
+    <p>
+      This is the Web Application of Genome Browser for the
+      <a href="https://regional.fish/">Regional Fish</a>.
+    </p>
+  </body>
+</html>
