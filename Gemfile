@@ -5,6 +5,9 @@ ruby '3.0.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails'
+
+gem 'bootstrap-sass'
+
 # Use mysql as the database for Active Record
 gem 'mysql2'
 # Use Puma as the app server
@@ -63,4 +66,5 @@ gem 'rexml'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
 
