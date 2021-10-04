@@ -1,2 +1,14 @@
 <h1>Galleries#show</h1>
 <p>Find me in app/views/galleries/show.html.erb</p>
+
+<table>
+<% @galleries.each do |gallery| %>
+  <tr><td><i><%= gallery.species_name %></i></td></tr>
+  <tr><td><%= gallery.common_name %></td></tr>
+  <tr><td><%= gallery.image_link %></td></tr>
+  <tr><td><%= gallery.version %></td></tr>
+  <tr><td><%= link_to "Browser", gallery.url_link %></td></tr>
+  <tr><td><%= gallery.sort_number %></td></tr>
+  <tr><td><%= gallery.description %></td></tr>
+<% end %>
+</table>

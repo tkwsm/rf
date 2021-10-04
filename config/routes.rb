@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'galleries/new'
-  get 'galleries/show'
-  get 'galleries/create'
-  get 'users/new'
 #  root 'static_pages#home'
 #  get 'static_pages/home'
 #  get 'static_pages/help'
@@ -13,5 +9,9 @@ Rails.application.routes.draw do
   get  '/about',   to: 'static_pages#about'
   get  '/contact', to: 'static_pages#contact'
   get  '/signup', to: 'users#new'
+  get  'galleries/new'
+  get  'galleries/show'
+  get  'galleries/create'
+  get  'users/new'
   resources :users
 end

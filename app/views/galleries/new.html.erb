@@ -1,2 +1,37 @@
-<h1>Galleries#new</h1>
-<p>Find me in app/views/galleries/new.html.erb</p>
+
+<% provide(:title, 'Sign up') %>
+
+<h1>Sign up</h1>
+
+<div class="row">
+  <div class="col-md6 col-md-offset-3">
+    <%= form_with(model: @gallery, local: true) do |f| %>
+
+      <%= f.label      :species_name %>
+      <%= f.text_field :species_name %>
+
+      <%= f.label      :common_name %>
+      <%= f.text_field :common_name %>
+
+      <%= f.label      :sort_number %>
+      <%= f.text_field :sort_number %>
+
+      <%= f.label      :version %>
+      <%= f.text_field :version %>
+
+      <%= f.label      :url_link %>
+      <%= f.text_field :url_link %>
+
+      <%= f.label      :image_link %>
+      <%= f.text_field :image_link %>
+
+      <%= f.label      :ncbi_taxonomy_id %>
+      <%= f.text_field :ncbi_taxonomy_id %>
+
+      <%= f.label      :description %>
+      <%= f.text_field :description %>
+
+      <%= f.submit "Create new data", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
