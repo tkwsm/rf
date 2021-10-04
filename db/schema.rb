@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_03_080941) do
+ActiveRecord::Schema.define(version: 2021_10_04_123314) do
+
+  create_table "galleries", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "species_name"
+    t.string "common_name"
+    t.text "description"
+    t.string "version"
+    t.text "url_link"
+    t.integer "sort_number"
+    t.string "image_link"
+    t.string "ncbi_taxonomy_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
