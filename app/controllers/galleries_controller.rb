@@ -3,6 +3,10 @@ class GalleriesController < ApplicationController
   end
 
   def show
+    @gallery = Gallery.find(params[:id])
+  end
+
+  def catalog
     @galleries = Gallery.all
   end
 
