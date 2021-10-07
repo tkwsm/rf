@@ -62,6 +62,10 @@ group :test do
   gem 'guard-minitest',           '2.4.6'
 end
 
+group :production, :staging do
+  gem 'unicorn'
+end
+
 gem 'rexml'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
