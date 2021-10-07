@@ -3,6 +3,7 @@ class GalleriesController < ApplicationController
   end
 
   def show
+    @link    = params[:link]
     @gallery = Gallery.find(params[:id])
   end
 
