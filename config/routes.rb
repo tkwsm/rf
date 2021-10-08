@@ -11,11 +11,19 @@ Rails.application.routes.draw do
   get  '/about',   to: 'static_pages#about'
   get  '/contact', to: 'static_pages#contact'
   get  '/signup', to: 'users#new'
-#  get  'galleries/new'
-  get  'galleries/new',        to: 'galleries#new',   via:'get'
-  get  'galleries/show',       to: 'galleries#show'
-  get  'galleries/create',     to: 'galleries#create'
-  get  'galleries/catalog',     to: 'galleries#catalog'
   resources :users
+
+  get  'galleries/new/:id',    to: 'galleries#new',    as: :galleries_new
+  get  'galleries/show/:id',        to: 'galleries#show' 
+
+  get   'galleries/edit/:id',  to: 'galleries#edit' 
+  patch 'galleries/edit/:id',  to: 'galleries#update' 
+
+  get  'galleries/viewer/:id', to: 'galleries#viewer', as: :galleries_viewer
+  get  'galleries/create',     to: 'galleries#create'
+  get  'galleries/catalog',    to: 'galleries#catalog'
+
+#  resources :galleries, only: [;create, :new, :edit, :update]
   resources :galleries
+
 end

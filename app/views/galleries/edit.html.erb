@@ -1,0 +1,38 @@
+
+<%= form_for(@gallery, url:{ controller: 'galleries', action: 'update', id: @gallery.id}) do |form| %>
+<table class="wTable">
+  <tr>
+  </tr>
+  <tr>
+    <td>ID</td><td><%= @gallery.id %></td>
+  </tr>
+  <tr>
+    <td>Spec. Name</td><td><%= form.text_field :species_name %></td>
+  </tr>
+  <tr>
+    <td>URL</td><td><%= form.text_field :url_link %></td>
+  </tr>
+  <tr>
+    <td>Common Name</td><td><%= form.text_field :common_name %></td>
+  </tr>
+  <tr>
+    <td>Sort Num.</td><td><%= form.text_field :sort_number %></td>
+  </tr>
+  <tr>
+    <td>Ver</td><td><%= form.text_field :version %></td>
+  </tr>
+  <tr>
+    <td>Image</td><td><%= form.text_field :image_link %></td>
+  </tr>
+  <tr>
+    <td>Tax ID</td><td><%= form.text_field :ncbi_taxonomy_id %></td>
+  </tr>
+  <tr>
+    <td>Description</td><td><%= form.text_field :description %></td>
+  </tr>
+  <tr>
+    <td></td><td><%= form.submit 'Send' %></td>
+  </tr>
+</table>
+<% end %>
+

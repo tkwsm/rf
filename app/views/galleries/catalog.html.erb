@@ -1,13 +1,48 @@
-<h1>Gallery</h1>
 
 <table>
+<tr><td>Catalog</td><td></td><td></td></tr>
+
 <% @galleries.each do |gallery| %>
-  <tr><th>Scientific Name</th><th><i><%= gallery.species_name %></i></th></tr>
-  <tr><td>Common Name</td><td><%= gallery.common_name %></td></tr>
-  <tr><td>Image</td><td><%= gallery.image_link %></td></tr>
-  <tr><td>Version</td><td><%= gallery.version %></td></tr>
-  <tr><td>Link</td><td><%= link_to "Browser", galleries_show_path(link: gallery.url_link, id: gallery.id) %></td></tr>
-  <tr><td>Sort Num.</td><td><%= gallery.sort_number %></td></tr>
-  <tr><td>Description</td><td><%= gallery.description %></td></tr>
+  <tr>
+    <td><%= gallery.id %></td>
+
+  <td>
+
+  <table class=wTable2 >
+    <tr>
+      <th>Scientific Name</th>
+      <th><i><%= gallery.species_name %></i></th>
+    </tr>
+    <tr>
+      <td>Common Name</td>
+      <td><%= gallery.common_name %></td>
+    </tr>
+    <tr>
+      <td>Image</td>
+      <td><%= gallery.image_link %></td>
+    </tr>
+    <tr>
+      <td>Version</td>
+      <td><%= gallery.version %></td>
+    </tr>
+    <tr>
+      <td>Link</td>
+      <td><%= link_to "Viewer", galleries_viewer_path(id: gallery.id, link: gallery.url_link) %></td>
+    </tr>
+    <tr>
+      <td>Sort Num.</td>
+      <td><%= gallery.sort_number %></td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td><%= gallery.description %></td>
+    </tr>
+  </table>
+  
+  </td>
+  <td><a href="/galleries/<%= gallery.id %>">SHOW</a></td>
+  <td><%= link_to "EDIT", edit_gallery_path(gallery) %></td>
+  </tr>
 <% end %>
+
 </table>

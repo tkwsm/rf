@@ -1,10 +1,11 @@
-
-  <%= @link %>
-
-  <iframe
-    src="<%= @link %>"
-    style="border: 1px solid black"
-    width="1000"
-    height="900"
-  >
-  </iframe>
+<table>
+  <tr><td>ID</td><td><%= @gallery.id %></td></tr>
+  <tr><td>Spec. Name</td><td><i><%= @gallery.species_name %></i></td></tr>
+  <tr><td>Common Name</td><td><%= @gallery.common_name %></td></tr>
+  <tr><td>NCBI Taxonomy ID</td><td><%= @gallery.ncbi_taxonomy_id %></td></tr>
+  <tr><td>Ver.</td><td><%= @gallery.version %></td></tr>
+  <tr><td>Sort Num.</td><td><%= @gallery.sort_number %></td></tr>
+  <tr><td>URL Link</td><td><%= @gallery.url_link %></td></tr>
+  <tr><td>Image</td><td><%= @gallery.image_link %></td></tr>
+  <tr><td>Description</td><td><%= @gallery.description %></td></tr>
+</table>
