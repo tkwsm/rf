@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
-#  get 'static_pages/home'
-#  get 'static_pages/help'
-#  get 'static_pages/about'
-#  get 'static_pages/contact'
-#  get 'static_pages/help'
-#  get  'users/new'
+
+#  get  'dbpaths/show/:id',    to: 'dbpaths#show',    as: :galleries_show
+  resources :dbpaths
+
+   get 'mafft/align'
+  post 'mafft/alignout'
+
+  get  'blast/search', to: 'blast#search'
+  post 'blast/blastout' => "blast/blastout"
+
   root 'static_pages#home'
   get  '/home',    to: 'static_pages#home'
+  get  '/search',  to: 'static_pages#search'
   get  '/help',    to: 'static_pages#help'
   get  '/about',   to: 'static_pages#about'
   get  '/contact', to: 'static_pages#contact'
@@ -27,3 +32,4 @@ Rails.application.routes.draw do
   resources :galleries
 
 end
+

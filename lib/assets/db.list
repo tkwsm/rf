@@ -1,0 +1,10 @@
+
+
+1_trub_genome_scaffold	/Users/tkdtmac1/study/db/takifugu_rubripes/Takifugu_rubripes.fTakRub1.2.dna.toplevel.fa
+1_trub_genemodel_nucl	/Users/tkdtmac1/study/db/takifugu_rubripes/Takifugu_rubripes.fTakRub1.2.cdna.all.fa
+1_trub_genemodel_prot	/Users/tkdtmac1/study/db/takifugu_rubripes/Takifugu_rubripes.fTakRub1.2.pep.all.fa
+
+2_char_genome_scaffold	/Users/tkdtmac1/study/db/clupea_harengus/Clupea_harengus.Ch_v2.0.2.dna.toplevel.fa
+2_char_genemodel_nucl	/Users/tkdtmac1/study/db/clupea_harengus/Clupea_harengus.Ch_v2.0.2.cdna.all.fa
+2_char_genemodel_prot	/Users/tkdtmac1/study/db/clupea_harengus/Clupea_harengus.Ch_v2.0.2.pep.all.fa
+

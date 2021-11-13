@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dbpaths</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Abbreviation</th>
+      <th>Sequence type</th>
+      <th>Db path</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dbpaths.each do |dbpath| %>
+      <tr>
+        <td><%= dbpath.project_id %></td>
+        <td><%= dbpath.abbreviation %></td>
+        <td><%= dbpath.sequence_type %></td>
+        <td><%= dbpath.db_path %></td>
+        <td><%= link_to 'Show', dbpath %></td>
+        <td><%= link_to 'Edit', edit_dbpath_path(dbpath) %></td>
+        <td><%= link_to 'Destroy', dbpath, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New Dbpath', new_dbpath_path %>
+

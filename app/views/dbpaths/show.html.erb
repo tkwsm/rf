@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @dbpath.project_id %>
+</p>
+
+<p>
+  <strong>Abbreviation:</strong>
+  <%= @dbpath.abbreviation %>
+</p>
+
+<p>
+  <strong>Sequence type:</strong>
+  <%= @dbpath.sequence_type %>
+</p>
+
+<p>
+  <strong>Db path:</strong>
+  <%= @dbpath.db_path %>
+</p>
+
+<%= link_to 'Edit', edit_dbpath_path(@dbpath) %> |
+<%= link_to 'Back', dbpaths_path %>
+
+<select name="pets" multiple size="5">
+    <optgroup label="species1">
+      <option value="first">First Value</option>
+      <option value="second" select>Second Value</option>
+      <option value="third">Third Value</option>
+    <optgroup label="species2">
+      <option value="first">First Value</option>
+      <option value="second" select>Second Value</option>
+      <option value="third">Third Value</option>
+    </optgroup>
+</select>
+

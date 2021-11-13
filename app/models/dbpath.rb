@@ -1,0 +1,2 @@
+class Dbpath < ApplicationRecord
+end

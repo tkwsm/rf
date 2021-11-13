@@ -1,0 +1,48 @@
+
+<body>
+<h1>NCBI Blast to Genes/Proteins</h1>
+
+  <%= form_tag("/blast/blastout") do  %>
+
+  Program:
+    <select name="blasttype" id="name_blasttype">
+      <option value="blastn"> BlastN: query = Nucleotide, db = Nucleotide </option>
+      <option value="blastp"> BlastP: query = Protein, db = Protein </option>
+      <option value="blastx"> BlastX: query = Nucleotide, db = Protein </option>
+      <option value="tblastn"> tBlastN: query = Protein, db = Nucleotide </option>
+      <option value="tblastx"> tBlastX: query = Nucleotide, db = Nucleotide </option>
+    </select>
+
+
+  Database: 
+    <select name="dbtype" id="name_dbtype" multiple size="5" >
+      <optgroup label="species1">
+        <option value="1_trub_genome_scaffold" selected> Trub Genome Scaffold </option>
+        <option value="1_trub_genemodel_nucl"> Trub Genemodel Nucleotide </option>
+        <option value="1_trub_genemodel_prot"> Trub Genemodel Protein </option>
+
+      <optgroup label="species2">
+        <option value="2_char_genome_scaffold"> Char Genome Scaffold </option>
+        <option value="2_char_genemodel_nucl"> Char Genemodel Nucleotide </option>
+        <option value="2_char_genemodel_prot"> Char Genemodel Protein </option>
+      </optgroup>
+    </select>
+
+    <br>
+    <br>
+
+    <textarea name="query_sequence" id="query_sequence" cols="40" rows="10">
+    </textarea>
+    <br>
+    <br>
+    evalue: <input type="text" name="evalue" id="evalue" value="1e-10" size="1">
+    <br>
+
+
+    num_alignments: <input type="text" name="num_alignments" id="num_alignments" value="30" size="1"><br>
+    num_descriptions: <input type="text" name="num_descriptions" value="30" size="1"><br>
+    <input type="hidden" name="project_id" id="project_id" value=:project_id><br>
+    <input type="submit" name="commit" value="search!" class="submit"><br>
+
+  <% end %>
+</body>

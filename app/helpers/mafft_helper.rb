@@ -1,0 +1,2 @@
+module MafftHelper
+end

@@ -27,7 +27,8 @@ class GalleriesController < ApplicationController
   end
 
   def viewer
-    @link    = params[:link]
+    @link       = params[:link]
+    @project_id = params[:id]
     @gallery = Gallery.find(params[:id])
   end
 

@@ -1,0 +1,30 @@
+
+<body>
+<h1>NCBI Blast to Genes/Proteins</h1>
+
+  "DBPATH"
+  <%= @dbpath %><br>
+
+  <hr>
+  "DBTYPE"
+  <%= @dbtype %><br>
+
+  <hr>
+  "QUERY SEQUENCE"
+  <div class="blastoutput">
+    <%= @qseq %>
+  </div>
+
+  <hr>
+  "BLAST TABULAR OUTPUT"
+  <br>
+  <%== @blastoutput6 %>
+
+  <hr>
+  "BLAST STANDARD OUTPUT"
+  <br>
+  <div class="blastoutput">
+    <%= @blastoutput0%>
+  </div>
+
+</body>

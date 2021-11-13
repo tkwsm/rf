@@ -1,0 +1,37 @@
+<%= form_with(model: dbpath) do |form| %>
+  <% if dbpath.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dbpath.errors.count, "error") %> prohibited this dbpath from being saved:</h2>
+
+      <ul>
+        <% dbpath.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :project_id %>
+    <%= form.number_field :project_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :abbreviation %>
+    <%= form.text_field :abbreviation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sequence_type %>
+    <%= form.text_field :sequence_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :db_path %>
+    <%= form.text_area :db_path %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

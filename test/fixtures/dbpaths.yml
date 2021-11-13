@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: 1
+  abbreviation: MyString
+  sequence_type: MyString
+  db_path: MyText
+
+two:
+  project_id: 1
+  abbreviation: MyString
+  sequence_type: MyString
+  db_path: MyText
