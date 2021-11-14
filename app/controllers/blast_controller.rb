@@ -2,11 +2,16 @@ class BlastController < ApplicationController
   protect_from_forgery
 
   def search
-    @dbpath = Dbpath.all
+    @dbpaths = Dbpath.all
+    @sample_array = Dbpath.where "abbreviation like ?", "char"
+    @project_id   = @sample_array.to_ary[0].project_id
+    @sample_array = @sample_array.select("db_path")
+    @sample_array = @sample_array.to_ary.collect{|x| x.db_path.split("/")[-1]}
   end
 
   def blastout
     # prepare sequence
+
     @project_id       = params[:project_id]
     @blasttype        = params[:blasttype]
     @dbtype           = params[:dbtype]
