@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Project</th>
       <th>Abbreviation</th>
       <th>Sequence type</th>
@@ -16,6 +17,7 @@
   <tbody>
     <% @dbpaths.each do |dbpath| %>
       <tr>
+        <td><%= dbpath.id %></td>
         <td><%= dbpath.project_id %></td>
         <td><%= dbpath.abbreviation %></td>
         <td><%= dbpath.sequence_type %></td>

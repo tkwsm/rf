@@ -29,6 +29,10 @@ ARGF.each do |x|
   send     = a[9]
   evalue   = a[10].to_f
   bitscore = a[11]
+  linkurl  = "http://35.73.97.50/jbrowse/?loc=" + \
+                        "#{sseqid}%3A" + \
+                        "#{sstart}..#{send}&tracks=Tnigr_v1_0&highlight="
+
   output += "<tr><td>#{qseqid}</td>\
                  <td>#{sseqid}</td>\
                  <td>#{pident}</td>\
@@ -39,7 +43,8 @@ ARGF.each do |x|
                  <td>#{sstart}</td>\
                  <td>#{send}</td>\
                  <td>#{evalue}</td>\
-                 <td>#{bitscore}</td></tr>\n"
+                 <td>#{bitscore}</td>\
+                 <td><a href=\"#{linkurl}\">Viewer</a></td></tr>\n"
 
 end
 output += "</table>"

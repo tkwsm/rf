@@ -5,6 +5,18 @@
   "DBPATH"
   <%= @dbpath %><br>
 
+  "DBType"
+  <br>
+  blast_type: <%= @blast_type %><br>
+  evalue: <%= @evalue %><br>
+  num_alignments: <%= @num_alignments %><br>
+  num_descriptions: <%= @num_descriptions %><br>
+  sequence_type: <%= @sequence_type %><br>
+  db_path: <%= @db_path %><br>
+  project_id: <%= @project_id %><br>
+  abbreviation: <%= @abbreviation %><br>
+  dbtype: <%= @dbtype %><br>
+
   <hr>
   "QUERY SEQUENCE"
   <div class="blastoutput">
@@ -14,13 +26,17 @@
   <hr>
   "BLAST TABULAR OUTPUT"
   <br>
+  <pre>
   <%== @blastoutput6 %>
+  </pre>
 
   <hr>
   "BLAST STANDARD OUTPUT"
   <br>
   <div class="blastoutput">
+    <pre>
     <%= @blastoutput0%>
+    </pre>
   </div>
 
 </body>
