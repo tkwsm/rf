@@ -1,0 +1,40 @@
+<h1>Genes in  ( Project ID: <%= params[:project_id] %>)</h1>
+
+<p><%= @msg %> The last Gene ID: <%= @maxgid %></p>
+<table class="table">
+  <tr>
+    <th>ID</th>
+    <th>Project ID</th>
+    <th>SeqID</th>
+    <th>G Source</th>
+    <th>G Type</th>
+    <th>G Start</th>
+    <th>G End</th>
+    <th>G Score</th>
+    <th>G Strand</th>
+    <th>G Phase</th>
+    <th>GeneID</th>
+    <th colspan="1"></th>
+  </tr>
+  <% @data_pages.each do |obj| %>
+  <tr>
+    <td><%= obj.id %></td>
+    <td><%= obj.project_id %></td>
+    <td><%= obj.seqid %></td>
+    <td><%= obj.gsource %></td>
+    <td><%= obj.gtype %></td>
+    <td><%= obj.gstart %></td>
+    <td><%= obj.gend %></td>
+    <td><%= obj.gscore %></td>
+    <td><%= obj.gstrand %></td>
+    <td><%= obj.gphase %></td>
+    <td><%= obj.geneid %></td>
+    <td><%# = link_to 'Show', obj %></td>
+  </tr>
+  <% end %>
+</table>
+
+<br>
+<div><%= paginate @data_pages %></div>
+<br>
+

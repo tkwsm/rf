@@ -1,9 +1,8 @@
 
-<% provide(:title, "Search") %>
-<h1>Sequence Search</h1>
 <p>
-  <%= link_to 'Blast Search', blast_search_path %>
+  <%= link_to 'Blast Search', blast_search_path(:project_id => params[:project_id]) %>
+
 </p>
-<p>
+<!-- <p>
   <%= link_to 'Mafft Search', mafft_align_path %>
-</p>
+</p> -->

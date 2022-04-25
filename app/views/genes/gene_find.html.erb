@@ -1,0 +1,23 @@
+
+<h1 class="display-4 text-primary" >Find Gene</h1>
+<p><%= @msg %><p>
+
+<%= form_tag( controller: "genes", action: "gene_find" ) do %>
+<div class="form-group">
+  <label for="gene_find">Gene Find</label>
+  <%= text_field_tag("geneid",'', {class:"form-control"}) %>
+ <%= submit_tag("Click") %>
+  <br> ex) ENSORLG00020022247
+</div>
+<% end %>
+
+
+<br>
+<br>
+<table class="table">
+<% @genes.each do |gene| %>
+  <%= gene.id %>
+  <%= gene.project_id %>
+  <%= gene.geneid %>
+<% end %>
+</table>

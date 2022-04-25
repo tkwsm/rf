@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_10_063229) do
+ActiveRecord::Schema.define(version: 2022_02_13_115354) do
+
+  create_table "attributes", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "project_id"
+    t.string "geneid"
+    t.string "gtag"
+    t.string "gvalue"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "dbpaths", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "project_id"
@@ -30,6 +39,54 @@ ActiveRecord::Schema.define(version: 2021_11_10_063229) do
     t.integer "sort_number"
     t.string "image_link"
     t.string "ncbi_taxonomy_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "genes", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "project_id"
+    t.string "seqid"
+    t.string "gsource"
+    t.string "gtype"
+    t.integer "gstart"
+    t.integer "gend"
+    t.float "gscore"
+    t.string "gstrand"
+    t.string "gphase"
+    t.string "geneid"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tattributes", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "project_id"
+    t.string "transcriptid"
+    t.string "ttag"
+    t.string "tvalue"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "transcript_seqs", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "project_id"
+    t.string "transcript_id"
+    t.text "nuc_sequence"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "transcripts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "project_id"
+    t.string "seqid"
+    t.string "gsource"
+    t.string "gtype"
+    t.integer "gstart"
+    t.integer "gend"
+    t.integer "gscore"
+    t.string "gstrand"
+    t.string "gphase"
+    t.string "transcriptid"
+    t.string "parentid"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

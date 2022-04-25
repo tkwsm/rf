@@ -1,0 +1,2 @@
+class TranscriptSeq < ApplicationRecord
+end

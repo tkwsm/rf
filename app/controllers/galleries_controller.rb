@@ -33,6 +33,8 @@ class GalleriesController < ApplicationController
   end
 
   def catalog
+    @galleries = []
+#    @galleries = Gallery.where( "id = ?", 4 ) ###
     @galleries = Gallery.all
   end
 
@@ -42,6 +44,16 @@ class GalleriesController < ApplicationController
       redirect_to @gallery
     else
       render 'new'
+    end
+  end
+
+  def destroy
+    @gallery = Gallery.find(params[:id])
+    @gallery.destroy
+    respond_to do |format|
+      format.html { redirect_to '/galleries/catalog', 
+        notice: 'Gallery was successfully destroyd.' }
+      format.json { head :no_content }
     end
   end
 

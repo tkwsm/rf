@@ -1,5 +1,30 @@
 Rails.application.routes.draw do
 
+  resources :transcript_seqs
+
+  get 'data_display/start_ids'
+  get 'data_display', to: 'data_display#start_ids'
+
+  get 'tattributes/index'
+  get 'tattributes', to: 'tattributes#index'
+
+  get 'transcripts/index'
+  get 'transcripts', to: 'transcripts#index'
+  
+  get 'attributes/index'
+  get 'attributes', to: 'attributes#index'
+
+  get 'attributes/:id', to: 'attributes#show'
+
+  get  'genes/gene_find'
+  post 'genes/gene_find'
+  get  'genes/index'
+  get  'genes', to: 'genes#index'
+  post 'genes', to: 'genes#index'
+
+  get  'genes/:id', to: 'genes#show'
+  post 'genes/:id', to: 'genes#show'
+
 #  get  'dbpaths/show/:id',    to: 'dbpaths#show',    as: :galleries_show
   resources :dbpaths
 

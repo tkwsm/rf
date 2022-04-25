@@ -1,0 +1,27 @@
+<h1>Attributes in  ( Project ID: <%= params[:project_id] %>)</h1>
+
+<p><%= @msg %> The last Attributes ID: <%= @maxgattrid %> </p>
+
+<table class="table">
+  <tr>
+    <th>ID</th>
+    <th>Project ID</th>
+    <th>GeneID</th>
+    <th>G tag</th>
+    <th>G value</th>
+  </tr>
+  <% @data_pages.each do |obj| %>
+  <tr>
+    <td><%= obj.id %></td>
+    <td><%= obj.project_id %></td>
+    <td><%= obj.geneid %></td>
+    <td><%= obj.gtag %></td>
+    <td><%= obj.gvalue %></td>
+  </tr>
+  <% end %>
+</table>
+
+<br>
+<div><%= paginate @data_pages %></div>
+
+

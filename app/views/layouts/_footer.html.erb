@@ -5,12 +5,21 @@
   </small>
   <nav>
     <ul>
-      <li><%= link_to "Home",    root_path              %></li>
-      <li><%= link_to "Gallery", galleries_catalog_path %></li>
-      <li><%= link_to "About",   about_path             %></li>
-      <li><%= link_to "Help",    help_path              %></li>
-      <li><%= link_to "Search",  search_path            %></li>
-      <li><%= link_to "Contact", contact_path           %></li>
+      <% if params[:project_id] %>
+        <li><%= link_to "Home",    root_path(project_id: params[:project_id]) %></li>
+        <li><%= link_to "Gallery", galleries_catalog_path(project_id: params[:project_id]) %></li>
+        <li><%= link_to "Search",  search_path(project_id: params[:project_id]) %></li>
+        <li><%= link_to "About",   about_path(project_id: params[:project_id]) %></li>
+        <li><%= link_to "Help",    help_path(project_id: params[:project_id])  %></li>
+        <li><%= link_to "Contact", contact_path(project_id: params[:project_id]) %></li>
+      <% else %>
+        <li><%= link_to "Home",    root_path  %></li>
+        <li><%= link_to "Gallery", galleries_catalog_path %></li>
+        <li><%= link_to "Search", search_path(project_id: params[:id] ) %></li>
+        <li><%= link_to "About",   about_path %></li>
+        <li><%= link_to "Help",    help_path  %></li>
+        <li><%= link_to "Contact", contact_path %></li>
+      <% end %>
     </ul>
   </nav>
 </footer>

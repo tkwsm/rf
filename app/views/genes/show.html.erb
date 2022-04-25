@@ -1,0 +1,115 @@
+
+<h1 class="display-4 text-primary" >Genes</h1>
+
+<br>
+
+<!-- <%= @project_id %>
+     <%= @burl %>
+     <%= @ipaddress_d4rf_rails3 %>
+     <%= @gattrdata4geneid %>      -->
+
+<table class="table">
+
+  <tr><th>Gene ID</th>
+    <th>Id</th>
+    <th>Project Id</th>
+    <th>SeqId</th>
+    <th>Source</th>
+    <th>Type</th>
+    <th>Start</th>
+    <th>End</th>
+    <th>Score</th>
+    <th>Strand</th>
+    <th>Phase</th></tr>
+
+  <% if @data %>
+  <tr><td class="link"><%= link_to( @data.geneid, @iframe_aurl ) %></td>
+      <td><%= @data.id %></td>
+      <td><%= @data.project_id %></td>
+      <td><%= @data.seqid %></td>
+      <td><%= @data.gsource %></td>
+      <td><%= @data.gtype %></td>
+      <td><%= @data.gstart %></td>
+      <td><%= @data.gend %></td>
+      <td><%= @data.gscore %></td>
+      <td><%= @data.gstrand %></td>
+      <td><%= @data.gphase %></td><tr>
+   <% else %>
+      <tr><tr>
+   <% end %>
+</table>
+
+<table class="table">
+  <tr><th>Attributes ID</th><th>G tag</th><th>G value</th><tr>
+  <% @gattrdata.each do |gattr|%>
+    <tr>
+      <td><%= gattr.id %></td>
+      <td><%= gattr.gtag %></td>
+      <td><%= gattr.gvalue %></td><tr>
+  <% end %>
+</table>
+
+<table class="table">
+  <tr><th>Transcript ID</th>
+    <th>Parernt ID</th>
+    <th>Id</th>
+    <th>Project Id</th>
+    <th>SeqId</th>
+    <th>gsource</th>
+    <th>gtype</th>
+    <th>gstart</th>
+    <th>gend</th>
+    <th>gscore</th>
+    <th>gstrand</th>
+    <th>gphase</th></tr>
+  <% @tdata.each do |t|%>
+  <tr><td><%= t.transcriptid %></td>
+      <td><%= t.parentid %></td>
+      <td><%= t.id %></td>
+      <td><%= t.project_id %></td>
+      <td><%= t.seqid %></td>
+      <td><%= t.gsource %></td>
+      <td><%= t.gtype %></td>
+      <td><%= t.gstart %></td>
+      <td><%= t.gend %></td>
+      <td><%= t.gscore %></td>
+      <td><%= t.gstrand %></td>
+      <td><%= t.gphase %></td><tr>
+  <% end %>
+
+  <tr>
+    <table class="table">
+    <detatils>
+    <summary>Transcript Sequence<Summary>
+    <% @tseqdata.each do |tseq|%>
+    <tr>
+      <td>
+        <pre><%= to_fasta( tseq.transcript_id, tseq.nuc_sequence, 60) %></pre>
+      </td>
+    <tr>
+    <% end %>
+    </details>
+    </table>
+  </tr>
+
+  <tr><table class="table">
+  <tr><th>Attributes ID</th><th>G tag</th><th>G value</th><tr>
+    <% @tattrdata.each do |tattr|%>
+    <tr>
+      <td><%= tattr.id %></td>
+      <td><%= tattr.ttag %></td>
+      <td><%= tattr.tvalue %></td><tr>
+    <% end %>
+  </table></tr>
+</table>
+
+<%= form_tag( controller: "genes", action: "show" ) do %>
+<div class="form-group">
+  <label for="gene_find">Gene Find</label>
+  <%= text_field_tag("geneid",'', {class:"form-control"}) %>
+  (eg. ENSORLG00020022247 ) <br> 
+  <br> <%= submit_tag("Click") %>
+</div>
+<% end %> 
+
+

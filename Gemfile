@@ -71,4 +71,19 @@ gem 'rexml'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+#  SystemD for demonize
+gem "sd_notify"
 
+# puma-daemon
+# gem 'puma-daemon', require: false
+#
+
+# Puma daemonize without "puma-daemon"
+gem "sd_notify"
+
+
+# Pagenation by Kaminari
+gem 'kaminari'
+
+# Bioruby
+gem 'bio'

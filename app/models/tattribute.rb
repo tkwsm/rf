@@ -1,0 +1,2 @@
+class Tattribute < ApplicationRecord
+end

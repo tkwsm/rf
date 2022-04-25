@@ -1,0 +1,42 @@
+
+
+  <%= @link.class %><br>
+  <%= @link %><br>
+  <%# = @link="http://35.73.97.50/jbrowse/index.html?data=data/json/ccarp_v1_0&loc=11:2000..3000" %><br>
+  <%= @link %><br>
+  <%= @project_id %><br>
+
+    <iframe
+        src="<%= @link %>"
+      style="border: 1px solid black"
+      width="1000"
+      height="900" 
+      frameborder="0" 
+      >
+    </iframe>
+
+  <% #iframe 
+      src="PARDOT_FORM_URL" 
+      width="100%" 
+      height="500" 
+      type="text/html" 
+      style="border: 0" %>
+  <% #/iframe %>
+
+
+  <script type="text/javascript">
+   var form = @link;
+   var params = "";
+   var thisScript = document.scripts[document.scripts.length - 1];
+   var iframe = document.createElement('iframe');
+  
+   iframe.setAttribute('src', form + params);
+   iframe.setAttribute('width', '100%');
+   iframe.setAttribute('height', 500);
+   iframe.setAttribute('type', 'text/html');
+   iframe.setAttribute('frameborder', 0);
+   iframe.style.border = '0';
+
+   thisScript.parentElement.replaceChild(iframe, thisScript);
+  </script>
+
