@@ -59,6 +59,8 @@ class GenesController < ApplicationController
     @tdata     = []
     @tattrdata = []
     @tseqdata  = []
+    @pdata     = []
+    @pseqdata  = []
     if @data
       obj = Transcript.find_by( parentid: @data.geneid )
       catalog = Gallery.find_by( id: @project_id )
@@ -77,13 +79,20 @@ class GenesController < ApplicationController
                                          @project_id, @transcriptid )
       end
 
-#      @aurl="http://35.73.97.50/jbrowse?loc=13%3A#{@data.gstart}..#{@data.gend}%26data=data/json/olati_v1_0"
+      @tdata.each do |t|
+        @pdata << Protein.where(" parentid = ? ", t.transcriptid )
+      end
+      @pdata.each do |pdat|
+        pdat.each do |p|
+          @pseqdata = ProteinSeq.where(" project_id = ? and proteinid = ?",
+                                         @project_id, p.proteinid )
+        end
+      end
+
       @aurl="#{@burl_ant}/jbrowse?loc=#{@data.seqid}%3A#{@data.gstart}..#{@data.gend}%26data=#{@burl_pos}"
     else
-#      @aurl="http://35.73.97.50/jbrowse?data=data/json/olati_v1_0"
       @aurl=@burl
     end
-#    @iframe_aurl="http://52.199.72.224/galleries/viewer/4?link=#{@aurl}"
     @iframe_aurl="http://" + "#{$ipaddress_d4rf_rails3}" "/galleries/viewer/#{@project_id}?link=#{@aurl}"
   end
 
