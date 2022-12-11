@@ -7,7 +7,6 @@ class ApplicationController < ActionController::Base
   end
 
   $ipaddress_d4rf_rails3   = "52.199.72.224"
-  $ipaddress_d4rf_rails7   = ""
   $ipaddress_d4rf_jbrowse3 = "35.73.97.50"
   $ipaddress_d4rf_jbrowse4 = "35.72.126.214"
 
@@ -21,3 +20,4 @@ class ApplicationController < ActionController::Base
   end
 
 end
+
