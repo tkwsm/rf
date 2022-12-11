@@ -4,3 +4,15 @@
 
 table { border: 2px #808080 solid; }
 td { background-color: white; }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+//#  align-content: space-between;
+
+.item {
+  color: #000000;
+  margin: 5px;
+  padding: 5px;
+}
