@@ -77,21 +77,6 @@
       <td><%= t.gphase %></td><tr>
   <% end %>
 
-  <tr>
-    <table class="table">
-    <detatils>
-    <summary>Transcript Sequence<Summary>
-    <% @tseqdata.each do |tseq|%>
-    <tr>
-      <td>
-        <pre><%= to_fasta( tseq.transcript_id, tseq.nuc_sequence, 60) %></pre>
-      </td>
-    <tr>
-    <% end %>
-    </details>
-    </table>
-  </tr>
-
   <tr><table class="table">
   <tr><th>Attributes ID</th><th>G tag</th><th>G value</th><tr>
     <% @tattrdata.each do |tattr|%>
@@ -100,9 +85,62 @@
       <td><%= tattr.ttag %></td>
       <td><%= tattr.tvalue %></td><tr>
     <% end %>
-  </table></tr>
+  </tr>
+
+  <tr>
+    <table class="table">
+    <detatils>
+    <summary>Transcript Sequence<Summary>
+    <% @tseqdata.each do |tseq|%>
+    <tr>
+      <td>
+        <pre><%= to_fasta( tseq.transcript_id, tseq.nuc_sequence, 100) %></pre>
+      </td>
+    <tr>
+    <% end %>
+    </details>
+    </table>
+  </tr>
+
+  <table class="table">
+    <tr><th>Protein ID</th>
+      <th>Parernt ID</th>
+      <th>Id</th>
+      <th>Project Id</th>
+      <th>SeqId</th>
+      <th>gsource</th>
+      <th>gtype</th></tr>
+    <% @pdata.each do |t|%>
+      <% t.each do |p|%>
+        <tr><td><%= p.proteinid %></td>
+            <td><%= p.parentid %></td>
+            <td><%= p.id %></td>
+            <td><%= p.project_id %></td>
+            <td><%= p.seqid %></td>
+            <td><%= p.gsource %></td>
+            <td><%= p.gtype %></td></tr>
+      <% end %>
+    <% end %>
+  </table>
+
+  <tr>
+    <table class="table">
+    <detatils>
+    <summary>Protein Sequence<Summary>
+    <% @pseqdata.each do |pseq|%>
+    <tr>
+      <td>
+        <pre><%= to_fasta( pseq.proteinid, pseq.prot_sequence, 100) %></pre>
+      </td>
+    <tr>
+    <% end %>
+    </details>
+    </table>
+  </tr>
+
 </table>
 
+<!-- 
 <%= form_tag( controller: "genes", action: "show" ) do %>
 <div class="form-group">
   <label for="gene_find">Gene Find</label>
@@ -111,5 +149,6 @@
   <br> <%= submit_tag("Click") %>
 </div>
 <% end %> 
+-->
 
 
