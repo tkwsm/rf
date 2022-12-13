@@ -1,0 +1,32 @@
+<%= form_with(model: transcript_seq) do |form| %>
+  <% if transcript_seq.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(transcript_seq.errors.count, "error") %> prohibited this transcript_seq from being saved:</h2>
+
+      <ul>
+        <% transcript_seq.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :project_id %>
+    <%= form.number_field :project_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transcript_id %>
+    <%= form.text_field :transcript_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nuc_sequence %>
+    <%= form.text_area :nuc_sequence %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

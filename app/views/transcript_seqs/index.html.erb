@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+
+<h1>Transcript Seqs</h1>
+
+<p><%= @msg %> The last Trarnscript Seq ID: <%= @maxtransc_seqid  %></p>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Project</th>
+      <th>Transcript</th>
+      <th>Nuc sequence</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @data_pages.each do |transcript_seq| %>
+      <tr>
+        <td><%= transcript_seq.id %></td>
+        <td><%= transcript_seq.project_id %></td>
+        <td><%= transcript_seq.transcript_id %></td>
+        <td><%= transcript_seq.nuc_sequence.size %></td>
+        <td><%= link_to 'Show', transcript_seq %></td>
+        <td><%= link_to 'Edit', edit_transcript_seq_path(transcript_seq) %></td>
+        <td><%# = link_to 'Destroy', transcript_seq, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<br>
+<div><%= paginate @data_pages %></div>
+<br>
+
+<%# = link_to 'New Transcript Seq', new_transcript_seq_path %>

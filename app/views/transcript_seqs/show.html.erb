@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @transcript_seq.project_id %>
+</p>
+
+<p>
+  <strong>Transcript:</strong>
+  <%= @transcript_seq.transcript_id %>
+</p>
+
+<p>
+  <strong>Nuc sequence length:</strong>
+  <%= @transcript_seq.nuc_sequence.size %>
+</p>
+
+<p>
+  <strong>Nuc sequence:</strong>
+  <pre><%= @fasta_out %></pre>
+</p>
+
+
+<%= link_to 'Edit', edit_transcript_seq_path(@transcript_seq) %> |
+<%= link_to 'Back', transcript_seqs_path %>
