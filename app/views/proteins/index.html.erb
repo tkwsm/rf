@@ -1,0 +1,31 @@
+<h1>Proteins in  ( Project ID: <%= params[:project_id] %>)</h1>
+
+<p><%= @msg %> The last Protein ID: <%= @maxtid %></p>
+
+<table class="table">
+  <tr>
+    <th>ID</th>
+    <th>Project ID</th>
+    <th>SeqID</th>
+    <th>P Source</th>
+    <th>P Type</th>
+    <th>ProteinID</th>
+    <th>ParentID</th>
+  </tr>
+  <% @data_pages.each do |obj| %>
+  <tr>
+    <td><%= obj.id %></td>
+    <td><%= obj.project_id %></td>
+    <td><%= obj.seqid %></td>
+    <td><%= obj.gsource %></td>
+    <td><%= obj.gtype %></td>
+    <td><%= obj.proteinid %></td>
+    <td><%= obj.parentid %></td>
+  </tr>
+  <% end %>
+</table>
+
+<br>
+<div><%= paginate @data_pages %></div>
+<br>
+
