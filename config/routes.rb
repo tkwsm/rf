@@ -2,6 +2,12 @@ Rails.application.routes.draw do
 
   resources :transcript_seqs
 
+  get 'protein_seqs/index'
+  get 'protein_seqs', to: 'protein_seqs#index'
+
+  get 'proteins/index'
+  get 'proteins', to: 'proteins#index'
+
   get 'data_display/start_ids'
   get 'data_display', to: 'data_display#start_ids'
 

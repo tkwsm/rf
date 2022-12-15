@@ -1,3 +1,10 @@
+#
+
+# require 'puma/daemon'
+
+# daemonize
+
+#
 # Puma can serve each request in a thread from an internal thread pool.
 # The `threads` method setting takes two numbers: a minimum and maximum.
 # Any libraries that use thread pools should be configured to match
@@ -15,9 +22,9 @@ worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
 
 # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
 #
-port ENV.fetch("PORT") { 3000 }
+ port ENV.fetch("PORT") { 3000 }   #### TK
 
-# bind "unix:///var/www/rails/rf/tmp/sockets/puma.sock" #### TK
+bind "unix:///var/www/rails/rf/tmp/sockets/puma.sock" #### TK
 
 # Specifies the `environment` that Puma will run in.
 #
@@ -43,3 +50,5 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 
 # Allow puma to be restarted by `rails restart` command.
 plugin :tmp_restart
+
+
