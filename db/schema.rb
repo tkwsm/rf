@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_13_115354) do
+ActiveRecord::Schema.define(version: 2022_05_08_073453) do
 
   create_table "attributes", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "project_id"
@@ -54,6 +54,25 @@ ActiveRecord::Schema.define(version: 2022_02_13_115354) do
     t.string "gstrand"
     t.string "gphase"
     t.string "geneid"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "protein_seqs", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "project_id"
+    t.string "proteinid"
+    t.text "prot_sequence"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "proteins", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "project_id"
+    t.string "seqid"
+    t.string "gsource"
+    t.string "gtype"
+    t.string "proteinid"
+    t.string "parentid"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
