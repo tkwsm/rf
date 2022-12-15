@@ -1,5 +1,5 @@
 
-blastdirpath="/Users/tkdtmac1/src/ncbiblast/ncbi-blast-2.11.0+/bin"
+blastdirpath="~/src/ncbi_blast/ncbi-blast-2.12.0+/bin"
 blasttype        = ARGV[0]
 db               = ARGV[1]
 queryseq         = ARGV[2]

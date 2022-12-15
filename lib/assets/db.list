@@ -1,10 +1,28 @@
 
+6_char_v1_0_genome_scaffold	/home/rf/db/GenomicDataAcquisition/Clupea_harengus.Ch_v2.0.2.dna.toplevel.fa
+6_char_genemodel_nucl	/home/rf/db/GenomicDataAcquisition/Clupea_harengus.Ch_v2.0.2.cdna.all.fa
+6_char_genemodel_prot	/home/rf/db/GenomicDataAcquisition/Clupea_harengus.Ch_v2.0.2.pep.all.fa
 
-1_char_genome_scaffold	/Users/tkdtmac1/study/db/clupea_harengus/Clupea_harengus.Ch_v2.0.2.dna.toplevel.fa
-1_char_genemodel_nucl	/Users/tkdtmac1/study/db/clupea_harengus/Clupea_harengus.Ch_v2.0.2.cdna.all.fa
-1_char_genemodel_prot	/Users/tkdtmac1/study/db/clupea_harengus/Clupea_harengus.Ch_v2.0.2.pep.all.fa
+5_ccarp_genome_scaffold	/home/rf/db/GenomicDataAcquisition/cyprinus_carpio/Cyprinus_carpio.common_carp_genome.dna.toplevel.fa
+5_ccarp_genome_scaffold	/home/rf/db/GenomicDataAcquisition/cyprinus_carpio/Cyprinus_carpio.common_carp_genome.cdna.all.fa
+5_ccarp_genemodel_prot	/home/rf/db/GenomicDataAcquisition/cyprinus_carpio/Cyprinus_carpio.common_carp_genome.pep.all.fa
 
-2_trub_genome_scaffold	/Users/tkdtmac1/study/db/takifugu_rubripes/Takifugu_rubripes.fTakRub1.2.dna.toplevel.fa
-2_trub_genemodel_nucl	/Users/tkdtmac1/study/db/takifugu_rubripes/Takifugu_rubripes.fTakRub1.2.cdna.all.fa
-2_trub_genemodel_prot	/Users/tkdtmac1/study/db/takifugu_rubripes/Takifugu_rubripes.fTakRub1.2.pep.all.fa
 
+3_drer_genome_scaffold	/home/rf/db/GenomicDataAcquisition/danio_rerio/Danio_rerio.GRCz11.dna.toplevel.fa
+3_drer_genemodel_nucl	/home/rf/db/GenomicDataAcquisition/danio_rerio/Danio_rerio.GRCz11.dna.toplevel.fa
+3_drer_genemodel_prot	/home/rf/db/GenomicDataAcquisition/danio_rerio/Danio_rerio.GRCz11.pep.all.fa
+
+7_dlab_genome_scaffold	/home/rf/db/GenomicDataAcquisition/Dicentrarchus_labrax.seabass_V1.0.dna.toplevel.fa
+7_slab_genemodel_nucl	/home/rf/db/GenomicDataAcquisition/dicentrarchus_labrax/Dicentrarchus_labrax.seabass_V1.0.cdna.all.fa
+7_dlab_genemodel_prot	/home/rf/db/GenomicDataAcquisition/dicentrarchus_labrax/Dicentrarchus_labrax.seabass_V1.0.pep.all.fa
+
+
+4_olati_v1_0_genome_scaffold	/home/rf/db/GenomicDataAcquisition/oryzias_latipes_hni/Oryzias_latipes_hni.ASM223471v1.dna.toplevel.fa
+4_olati_v1_0_genemodel_nucl	/home/rf/db/GenomicDataAcquisition/oryzias_latipes_hni/Oryzias_latipes_hni.ASM223471v1.cdna.all.fa
+4_olati_v1_0_genemodel_prot	/home/rf/db/GenomicDataAcquisition/oryzias_latipes_hni/Oryzias_latipes_hni.ASM223471v1.pep.all.fa
+
+10_trub_genome_scaffold	/home/rf/db/GenomicDataAcquisition/fugu_rubripes/Takifugu_rubripes.fTakRub1.2.dna.toplevel.fa
+10_trub_genemodel_nucl	/home/rf/db/GenomicDataAcquisition/fugu_rubripes/Takifugu_rubripes.fTakRub1.2.cdna.all.fa
+10_trub_genemodel_prot	/home/rf/db/GenomicDataAcquisition/fugu_rubripes/Takifugu_rubripes.fTakRub1.2.pep.all.fa
+
+8_efusc_v1_0_scaffold
