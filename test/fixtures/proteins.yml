@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: 1
+  seqid: MyString
+  gsource: MyString
+  gtype: MyString
+  proteinid: MyString
+  parentid: MyString
+
+two:
+  project_id: 1
+  seqid: MyString
+  gsource: MyString
+  gtype: MyString
+  proteinid: MyString
+  parentid: MyString

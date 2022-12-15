@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: 1
+  seqid: MyString
+  gsource: MyString
+  gtype: MyString
+  gstart: 1
+  gend: 1
+  gscore: 1
+  gstrand: MyString
+  gphase: MyString
+  transcriptid: MyString
+  parentid: MyString
+
+two:
+  project_id: 1
+  seqid: MyString
+  gsource: MyString
+  gtype: MyString
+  gstart: 1
+  gend: 1
+  gscore: 1
+  gstrand: MyString
+  gphase: MyString
+  transcriptid: MyString
+  parentid: MyString
